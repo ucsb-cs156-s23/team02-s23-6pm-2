@@ -3,8 +3,8 @@ Create database table for Dogs
 
 # Acceptance Criteria:
 
-- [ ] There is an `@Entity` class called Dogs.java
-- [ ] There is a `@Repository` class called Dogs.java
+- [ ] There is an `@Entity` class called Dog.java
+- [ ] There is a `@Repository` class called Dog.java
 - [ ] When you start up the repo on localhost, you can see the table
       using the H2 console (see the file `docs/h2-database.md` for 
       instructions.)
