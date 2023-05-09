@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s23/team02-s23-6pm-2
 owner: ucsb-cs156-s23
 repo_name: team02-s23-6pm-2
-pull_requests: [{"author":{"id":"MDQ6VXNlcjUxMzkzMTI3","is_bot":false,"login":"chriscerie","name":"Chris Chang"},"headRefName":"dog-database","number":172,"title":"Add dog database","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-2/pull/172"}]
+pull_requests: [{"author":{"id":"U_kgDOBtKZtg","is_bot":false,"login":"jgarcia-ucsb","name":""},"headRefName":"jg-issues","number":175,"title":"Added Shoe.java and ShoeRepository.java","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-2/pull/175"},{"author":{"id":"MDQ6VXNlcjUxMzkzMTI3","is_bot":false,"login":"chriscerie","name":"Chris Chang"},"headRefName":"dog-database","number":172,"title":"Add dog database","url":"https://github.com/ucsb-cs156-s23/team02-s23-6pm-2/pull/172"}]
