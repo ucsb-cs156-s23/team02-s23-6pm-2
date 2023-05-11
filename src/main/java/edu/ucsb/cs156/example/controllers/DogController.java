@@ -34,8 +34,8 @@ public class DogController extends ApiController {
     @PreAuthorize("hasRole('ROLE_USER')")
     @GetMapping("/all")
     public Iterable<Dog> allDogs() {
-        Iterable<Dog> dates = dogRepository.findAll();
-        return dates;
+        Iterable<Dog> dogs = dogRepository.findAll();
+        return dogs;
     }
 
     @ApiOperation(value = "Get a single dog")
@@ -80,7 +80,7 @@ public class DogController extends ApiController {
         return genericMessage("Dog with id %s deleted".formatted(name));
     }
 
-    @ApiOperation(value = "Update a single date")
+    @ApiOperation(value = "Update a single dog")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PutMapping("")
     public Dog updateDog(
