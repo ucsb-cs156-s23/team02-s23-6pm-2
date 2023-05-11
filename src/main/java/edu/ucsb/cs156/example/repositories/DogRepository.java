@@ -1,10 +1,10 @@
 package edu.ucsb.cs156.example.repositories;
 
-import edu.ucsb.cs156.example.entities.UCSBDate;
+import edu.ucsb.cs156.example.entities.Dog;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface Dog extends CrudRepository<UCSBDate, Long> {
+public interface DogRepository extends CrudRepository<Dog, Long> {
 }
