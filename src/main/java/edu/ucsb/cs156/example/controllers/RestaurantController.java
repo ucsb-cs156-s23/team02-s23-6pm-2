@@ -88,15 +88,14 @@ public class RestaurantController extends ApiController {
     public Restaurant updateRestaurant(
             @ApiParam("id") @RequestParam Long id,
             @RequestBody @Valid Restaurant incoming) {
-
+    
         Restaurant restaurant = restaurantRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(Restaurant.class, id));
-
-        restaurant.setName(incoming.getName());
-        restaurant.setDescription(incoming.getDescription());
-
+    
+        restaurant.updateFrom(incoming);
+    
         restaurantRepository.save(restaurant);
-
+    
         return restaurant;
     }
 }

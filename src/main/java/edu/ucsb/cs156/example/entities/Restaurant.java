@@ -16,6 +16,10 @@ import lombok.Builder;
 @Builder
 @Entity(name = "Restaurant")
 public class Restaurant {
+  public void updateFrom(Restaurant other) {
+    this.name = other.name;
+    this.description = other.description;
+}
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
