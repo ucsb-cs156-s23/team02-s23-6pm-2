@@ -20,6 +20,11 @@ import lombok.Builder;
 public class Shoe {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public void updateFrom(Shoe other) {
+    this.name = other.name;
+    this.color = other.color;
+    this.brand=other.brand;
+}
   private long id;
 
   private String name;

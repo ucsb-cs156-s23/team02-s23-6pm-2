@@ -105,9 +105,7 @@ public class ShoeController extends ApiController {
         Shoe shoe = shoeRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(Shoe.class, id));
 
-        shoe.setName(incoming.getName());
-        shoe.setColor(incoming.getColor());
-        shoe.setBrand(incoming.getBrand());
+                shoe.updateFrom(incoming);
 
         shoeRepository.save(shoe);
 
