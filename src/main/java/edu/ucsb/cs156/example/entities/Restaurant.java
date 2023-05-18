@@ -1,7 +1,9 @@
 package edu.ucsb.cs156.example.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,10 +14,12 @@ import lombok.Builder;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity(name = "dog")
-public class Dog {
+@Entity(name = "Restaurant")
+public class Restaurant {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long id;
   private String name;
-  private String breed;
-  private String gender;
+  private String description;
+  
 }
