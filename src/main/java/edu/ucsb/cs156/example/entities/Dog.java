@@ -14,6 +14,13 @@ import lombok.Builder;
 @Builder
 @Entity(name = "dog")
 public class Dog {
+
+  public void updateFrom(Dog other) {
+    this.name = other.name;
+    this.breed = other.breed;
+    this.gender=other.gender;
+}
+
   @Id
   private String name;
   private String breed;

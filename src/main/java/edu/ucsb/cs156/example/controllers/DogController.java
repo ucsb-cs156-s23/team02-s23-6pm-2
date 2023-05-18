@@ -90,9 +90,7 @@ public class DogController extends ApiController {
         Dog dog = dogRepository.findById(name)
                 .orElseThrow(() -> new EntityNotFoundException(Dog.class, name));
 
-        dog.setName(incoming.getName());
-        dog.setBreed(incoming.getBreed());
-        dog.setGender(incoming.getGender());
+dog.updateFrom(dog);
 
         dogRepository.save(dog);
 
