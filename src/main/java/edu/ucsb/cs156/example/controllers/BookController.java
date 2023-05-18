@@ -90,9 +90,7 @@ public class BookController extends ApiController {
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(Book.class, id));
 
-        book.setTitle(incoming.getTitle());
-        book.setAuthor(incoming.getAuthor());
-        book.setYear(incoming.getYear());
+book.updateFrom(incoming);
 
         bookRepository.save(book);
 

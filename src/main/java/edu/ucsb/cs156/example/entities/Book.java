@@ -18,6 +18,14 @@ import lombok.Builder;
 @Builder
 @Entity(name = "book")
 public class Book {
+
+  public void updateFrom(Book other) {
+    this.title = other.title;
+    this.author = other.author;
+    this.year=other.year;
+}
+
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
