@@ -184,7 +184,7 @@ public class BookControllerTests extends ControllerTestCase {
 
                 // act
                 MvcResult response = mockMvc.perform(
-        post("/api/books/post?title=1984&author=George%20Orwell&year=1949")
+        post("/api/books/post?title=1984&author=George Orwell&year=1949")
                                                 .with(csrf()))
                                 .andExpect(status().isOk()).andReturn();
 
