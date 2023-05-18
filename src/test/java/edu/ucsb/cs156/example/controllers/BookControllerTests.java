@@ -136,17 +136,17 @@ public class BookControllerTests extends ControllerTestCase {
                 //LocalDateTime ldt1 = LocalDateTime.parse("2022-01-03T00:00:00");
 
                 Book book1 = Book.builder()
-                                .name("Jordan")
-                                .color("Red")
-                                .brand("Nike")
+                                .title("1984")
+                                .author("George Orwell")
+                                .year("1949")
                                 .build();
 
                 //LocalDateTime ldt2 = LocalDateTime.parse("2022-03-11T00:00:00");
 
                 Book book2 = Book.builder()
-                                .name("Yeezy")
-                                .color("Gray")
-                                .brand("Adidas")
+                                .title("Cat's Cradle")
+                                .author("Kurt Vonnegut")
+                                .year("1963")
                                 .build();
 
                 ArrayList<Book> expectedBooks = new ArrayList<>();
@@ -174,9 +174,9 @@ public class BookControllerTests extends ControllerTestCase {
                 //LocalDateTime ldt1 = LocalDateTime.parse("2022-01-03T00:00:00");
 
                 Book book1 = Book.builder()
-                                .name("Jordan")
-                                .color("Red")
-                                .brand("Nike")
+                                .title("1984")
+                                .author("George Orwell")
+                                .year("1949")
                                 .build();
 
 
@@ -184,7 +184,7 @@ public class BookControllerTests extends ControllerTestCase {
 
                 // act
                 MvcResult response = mockMvc.perform(
-        post("/api/books/post?name=Jordan&color=Red&brand=Nike")
+        post("/api/books/post?title=1984&author=George%20Orwell&year=1949")
                                                 .with(csrf()))
                                 .andExpect(status().isOk()).andReturn();
 
@@ -203,9 +203,9 @@ public class BookControllerTests extends ControllerTestCase {
                 //LocalDateTime ldt1 = LocalDateTime.parse("2022-01-03T00:00:00");
 
                 Book book1 = Book.builder()
-                                .name("Jordan")
-                                .color("Red")
-                                .brand("Nike")
+                                .title("1984")
+                                .author("George Orwell")
+                                .year("1949")
                                 .build();
 
 
@@ -254,15 +254,15 @@ public class BookControllerTests extends ControllerTestCase {
                 //LocalDateTime ldt2 = LocalDateTime.parse("2023-01-03T00:00:00");
 
                 Book bookOrig = Book.builder()
-                                .name("Jordan")
-                                .color("Red")
-                                .brand("Nike")
+                                .title("1984")
+                                .author("George Orwell")
+                                .year("1949")
                                 .build();
 
                 Book bookEdited = Book.builder()
-                                .name("Yeezy")
-                                .color("Gray")
-                                .brand("Adidas")
+                                .title("1984")
+                                .author("George Orwell")
+                                .year("1984")
                                 .build();
 
                 String requestBody = mapper.writeValueAsString(bookEdited);
@@ -293,9 +293,9 @@ public class BookControllerTests extends ControllerTestCase {
                 //LocalDateTime ldt1 = LocalDateTime.parse("2022-01-03T00:00:00");
 
                 Book bookEdited = Book.builder()
-                                .name("Yeezy")
-                                .color("Gray")
-                                .brand("Adidas")
+                                .title("1984")
+                                .author("George Orwell")
+                                .year("1984")
                                 .build();
 
                 String requestBody = mapper.writeValueAsString(bookEdited);

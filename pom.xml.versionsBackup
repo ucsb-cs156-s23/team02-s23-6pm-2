@@ -10,7 +10,7 @@
     </parent>
     <groupId>edu.ucsb.cs156</groupId>
     <artifactId>example</artifactId>
-    <version>9.9.9</version>
+    <version>1.1.0</version>
     <name>example</name>
     <description>Spring Boot + React Example</description>
     <properties>
@@ -37,12 +37,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-gateway-mvc</artifactId>
-            <version>4.0.5</version>
+            <version>3.0.1</version>
         </dependency>
         <dependency>
             <groupId>me.paulschwarz</groupId>
             <artifactId>spring-dotenv</artifactId>
-            <version>4.0.0</version>
+            <version>2.4.1</version>
         </dependency>
 
         <dependency>
