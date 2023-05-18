@@ -18,13 +18,14 @@ import lombok.Builder;
 @Builder
 @Entity(name = "shoe")
 public class Shoe {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+
   public void updateFrom(Shoe other) {
     this.name = other.name;
     this.color = other.color;
     this.brand=other.brand;
 }
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   private String name;
