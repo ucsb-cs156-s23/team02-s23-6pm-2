@@ -85,7 +85,7 @@ public class GameControllerTests extends ControllerTestCase {
 
         // arrange
 
-        Game game = game.builder()
+        Game game = Game.builder()
                 .name("Doom")
                 .publisher("id")
                 .rating("E")
@@ -140,7 +140,7 @@ assertEquals("Game with id dne not found", json.get("message"));
         Game mario = Game.builder()
                 .name("Mario")
                 .publisher("Nintendo")
-                .gender("E")
+                .rating("E")
                 .build();
 
         ArrayList<Game> expectedGames = new ArrayList<>();

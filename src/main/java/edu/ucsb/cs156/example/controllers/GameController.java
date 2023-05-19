@@ -60,8 +60,8 @@ public class GameController extends ApiController {
 
         Game game = new Game();
         game.setName(name);
-        game.setBreed(publisher);
-        game.setGender(rating);
+        game.setPublisher(publisher);
+        game.setRating(rating);
 
         Game savedGame = gameRepository.save(game);
 
